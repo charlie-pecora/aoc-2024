@@ -1,20 +1,19 @@
 # charlie-pecora.aoc-2024
 
-FIXME: description
+Learning clojure by attempting AOC-2024
 
 ## Installation
-
-Download from http://example.com/FIXME.
+N/A
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar charlie-pecora.aoc-2024-0.1.0-standalone.jar [args]
+```
+$ lein run -- dayX
+```
 
 ## Options
 
-FIXME: listing of options this app accepts.
+There should be one option per day of AOC, added as they are implemented
 
 ## Examples
 
