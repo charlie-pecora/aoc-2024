@@ -17,9 +17,15 @@
 (defn part2 [input]
   (def dont-splits (str/split input #"don't\(\)"))
   (def do-blocks (str/join (concat
+                             ;; keep the first element, which is all blocks before the first "don't()"
                             (take 1 dont-splits)
                             (map
-                             (fn [s] (get (str/split s #"do\(\)" 2) 1))
+                              ;; in each following block (after a "don't()") check if there's a "do()"
+                              ;; limit the check for one split (limit 2 blocks)
+                              ;; then get the second element, which is all code after the "do()"
+                             (fn [s] (get
+                                      (str/split s #"do\(\)" 2)
+                                      1))
                              (drop 1 dont-splits)))))
 
   (->> do-blocks
