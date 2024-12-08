@@ -1,7 +1,8 @@
 (ns charlie-pecora.aoc-2024
   (:gen-class)
   (:require [charlie-pecora.aoc-2024.day1 :as day1])
-  (:require [charlie-pecora.aoc-2024.day2 :as day2]))
+  (:require [charlie-pecora.aoc-2024.day2 :as day2])
+  (:require [charlie-pecora.aoc-2024.day3 :as day3]))
 
 (defn -main
   "I don't do a whole lot ... yet."
@@ -10,5 +11,6 @@
   (case day
     "day1" (day1/main)
     "day2" (day2/main)
+    "day3" (day3/main)
     (println day "not found")))
 
